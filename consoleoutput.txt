@@ -1,0 +1,50 @@
+2025-10-23 13:01:27: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+2025-10-23 13:01:27: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+2025-10-23 13:01:27: oggm.cfg: Multiprocessing: using all available processors (N=4)
+2025-10-23 13:01:27: oggm.cfg: PARAMS['store_model_geometry'] changed from `False` to `True`.
+2025-10-23 13:01:28: oggm.workflow: init_glacier_directories from prepro level 4 on 1 glaciers.
+2025-10-23 13:01:28: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
+2025-10-23 13:01:28: oggm.workflow: Execute entity tasks [process_cesm_data] on 1 glaciers
+2025-10-23 13:01:28: oggm.shop.gcm_climate: (RGI60-11.00897) process_cesm_data
+/home/connor/miniforge3/envs/oggm_env/lib/python3.11/site-packages/oggm/shop/gcm_climate.py:379: SerializationWarning: Unable to decode time axis into full numpy.datetime64[ns] objects, continuing using cftime.datetime objects instead, reason: dates out of range. To silence this warning use a coarser resolution 'time_unit' or specify 'use_cftime=True'.
+  tempds = xr.open_dataset(fpath_temp)
+/home/connor/miniforge3/envs/oggm_env/lib/python3.11/site-packages/oggm/shop/gcm_climate.py:380: SerializationWarning: Unable to decode time axis into full numpy.datetime64[ns] objects, continuing using cftime.datetime objects instead, reason: dates out of range. To silence this warning use a coarser resolution 'time_unit' or specify 'use_cftime=True'.
+  precpcds = xr.open_dataset(fpath_precc)
+/home/connor/miniforge3/envs/oggm_env/lib/python3.11/site-packages/oggm/shop/gcm_climate.py:381: SerializationWarning: Unable to decode time axis into full numpy.datetime64[ns] objects, continuing using cftime.datetime objects instead, reason: dates out of range. To silence this warning use a coarser resolution 'time_unit' or specify 'use_cftime=True'.
+  preclpds = xr.open_dataset(fpath_precl)
+/home/connor/miniforge3/envs/oggm_env/lib/python3.11/site-packages/oggm/shop/gcm_climate.py:391: SerializationWarning: Unable to decode time axis into full numpy.datetime64[ns] objects, continuing using cftime.datetime objects instead, reason: dates out of range. To silence this warning use a coarser resolution 'time_unit' or specify 'use_cftime=True'.
+  time = netCDF4.num2date(tempds.time_bnds[:, 0], time_unit,
+/home/connor/miniforge3/envs/oggm_env/lib/python3.11/site-packages/oggm/shop/gcm_climate.py:395: SerializationWarning: Unable to decode time axis into full numpy.datetime64[ns] objects, continuing using cftime.datetime objects instead, reason: dates out of range. To silence this warning use a coarser resolution 'time_unit' or specify 'use_cftime=True'.
+  time = tempds.time_bnds[:, 0].values
+2025-10-23 13:01:28: oggm.shop.gcm_climate: (RGI60-11.00897) process_gcm_data
+2025-10-23 13:01:29: oggm.workflow: Execute entity tasks [run_from_climate_data] on 1 glaciers
+2025-10-23 13:01:29: oggm.core.flowline: (RGI60-11.00897) run_from_climate_data_no_spinup
+2025-10-23 13:01:29: oggm.core.flowline: You are attempting to run_with_climate_data at dates prior to the RGI inventory date. This may indicate some problem in your workflow. Consider using `fixed_geometry_spinup_yr` for example.
+2025-10-23 13:01:29: oggm.core.flowline: (RGI60-11.00897) flowline_model_run_no_spinup
+2025-10-23 13:01:30: oggm.workflow: Execute entity tasks [run_constant_climate] on 1 glaciers
+2025-10-23 13:01:30: oggm.core.flowline: (RGI60-11.00897) run_constant_climate_spinup
+2025-10-23 13:01:30: oggm.core.flowline: (RGI60-11.00897) flowline_model_run_spinup
+2025-10-23 13:01:31: oggm.workflow: Execute entity tasks [run_from_climate_data] on 1 glaciers
+2025-10-23 13:01:31: oggm.core.flowline: (RGI60-11.00897) run_from_climate_data_with_spinup
+2025-10-23 13:01:31: oggm.core.flowline: (RGI60-11.00897) flowline_model_run_with_spinup
+2025-10-23 13:01:33: oggm.workflow: Execute entity tasks [run_from_climate_data] on 1 glaciers
+2025-10-23 13:01:33: oggm.core.flowline: (RGI60-11.00897) run_from_climate_data_with_spinup_50yr
+2025-10-23 13:01:33: oggm.core.flowline: (RGI60-11.00897) flowline_model_run_with_spinup_50yr
+2025-10-23 13:01:34: oggm.utils: Applying global task compile_glacier_statistics on 1 glaciers
+2025-10-23 13:01:34: oggm.workflow: Execute entity tasks [glacier_statistics] on 1 glaciers
+2025-10-23 13:01:34: oggm.utils: (RGI60-11.00897) glacier_statistics
+2025-10-23 13:01:35: oggm.utils: Applying global task compile_run_output on 1 glaciers
+2025-10-23 13:01:35: oggm.utils: Applying compile_run_output on 1 gdirs.
+2025-10-23 13:01:35: oggm.utils: Applying global task compile_run_output on 1 glaciers
+2025-10-23 13:01:35: oggm.utils: Applying compile_run_output on 1 gdirs.
+2025-10-23 13:01:35: oggm.utils: Applying global task compile_run_output on 1 glaciers
+2025-10-23 13:01:35: oggm.utils: Applying compile_run_output on 1 gdirs.
+2025-10-23 13:01:35: oggm.workflow: Execute entity tasks [add_smoothed_glacier_topo] on 1 glaciers
+2025-10-23 13:01:35: oggm.sandbox.distribute_2d: (RGI60-11.00897) add_smoothed_glacier_topo
+2025-10-23 13:01:35: oggm.workflow: Execute entity tasks [distribute_thickness_per_altitude] on 1 glaciers
+2025-10-23 13:01:35: oggm.core.inversion: (RGI60-11.00897) distribute_thickness_per_altitude
+2025-10-23 13:01:35: oggm.core.gis: (RGI60-11.00897) gridded_attributes
+2025-10-23 13:01:35: oggm.workflow: Execute entity tasks [assign_points_to_band] on 1 glaciers
+2025-10-23 13:01:35: oggm.sandbox.distribute_2d: (RGI60-11.00897) assign_points_to_band
+2025-10-23 13:01:35: oggm.workflow: Execute entity tasks [distribute_thickness_from_simulation] on 1 glaciers
+2025-10-23 13:01:35: oggm.sandbox.distribute_2d: (RGI60-11.00897) distribute_thickness_from_simulation
