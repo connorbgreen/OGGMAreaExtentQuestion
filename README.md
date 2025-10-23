@@ -9,7 +9,7 @@ Display glacier area and thickness changes on a grid: https://tutorials.oggm.org
 The resulting plot is HintereisfernerSpunUp.pdf while the output to consol provided in the .txt file.
 
 The main concern is that the area extent plotted for the three years are all nearly identical.
-This is counter intituvie due to the liturature indicating that ~1850 being the year of maximum extent (ie Modeling the Response of the Langtang Glacier and the Hintereisferner to a Changing Climate Since the Little Ice Age).
+This is counter intituvie due to the liturature indicating that ~1850 being the year of maximum extent (ie [Modeling the Response of the Langtang Glacier and the Hintereisferner to a Changing Climate Since the Little Ice Age](https://doi.org/10.3389/feart.2019.00143)).
 This program's spun up area shows only a minor change in glaicer thickness and no change in the area.
 
 There is almost certainly something that I either did incorrectly or something that is missing, but I am not familar enough with the package to know.
