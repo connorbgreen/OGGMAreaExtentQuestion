@@ -11,3 +11,5 @@ The resulting plot is HintereisfernerSpunUp.pdf while the output to consol provi
 The main concern is that the area extent plotted for the three years are all nearly identical.
 This is counter intituvie due to the liturature indicating that ~1850 being the year of maximum extent (ie Modeling the Response of the Langtang Glacier and the Hintereisferner to a Changing Climate Since the Little Ice Age).
 This program's spun up area shows only a minor change in glaicer thickness and no change in the area.
+
+There is almost certainly something that I either did incorrectly or something that is missing, but I am not familar enough with the package to know.
